@@ -1,3 +1,4 @@
+class MoviesController < ApplicationController
 def search
   if params[:query].present?
     # Supondo que você tenha um serviço para buscar filmes do TMDB
