@@ -38,4 +38,11 @@ class ListsController < ApplicationController
     params.require(:list).permit(:name)
   end
 
+  def search
+    @movies = TmdbService.search_movies(params[:query])
+    respond_to do |format|
+      format.json { render json: @movies }
+    end
+  end
+
 end
