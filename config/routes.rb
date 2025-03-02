@@ -16,4 +16,3 @@ get 'movies/search', to: 'movies#search', as: 'search_movies'
   # Defines the root path route ("/")
   # root "posts#index"
 end
-
