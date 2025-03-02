@@ -1,0 +1,18 @@
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+/root/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-w8xuuh sitelibdir\=./.gem.20250301-62146-w8xuuh clean
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-w8xuuh sitelibdir\=./.gem.20250301-62146-w8xuuh
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-w8xuuh sitelibdir\=./.gem.20250301-62146-w8xuuh install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20250301-62146-w8xuuh/skiptrace/internal
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-w8xuuh sitelibdir\=./.gem.20250301-62146-w8xuuh clean

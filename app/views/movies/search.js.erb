@@ -1,1 +1,38 @@
-document.getElementById('movie-results').innerHTML = '<%= j render "movies/search_results", movies: @movies %>';
+document.getElementById('movie-results').innerHTML = `
+  <div class="list-group">
+    <% @movies.each do |movie| %>
+      <div class="list-group-item movie-result d-flex align-items-center" data-id="<%= movie[:id] %>">
+        <% if movie[:poster_path].present? %>
+          <img src="https://image.tmdb.org/t/p/w200<%= movie[:poster_path] %>" alt="<%= movie[:title] %>" class="mr-3" style="width: 50px;">
+        <% else %>
+          <img src="https://via.placeholder.com/50x75?text=No+Poster" alt="No Poster" class="mr-3">
+        <% end %>
+        <div class="ml-3">
+          <h5 class="mb-1"><%= movie[:title] %> <% if movie[:release_date].present? %>(<%= movie[:release_date][0..3] %>)<% end %></h5>
+          <p class="mb-1 text-muted"><%= movie[:overview].present? ? movie[:overview][0..100] + '...' : 'No overview available' %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <script>
+    document.querySelectorAll('.movie-result').forEach(item => {
+      item.addEventListener('click', function() {
+        // Highlight the selected movie
+        document.querySelectorAll('.movie-result').forEach(el => {
+          el.classList.remove('active');
+        });
+        this.classList.add('active');
+
+        // Set the movie ID in the hidden field
+        document.querySelector('input[name="bookmark[movie_id]"]').value = this.dataset.id;
+
+        // Enable the submit button
+        document.getElementById('add-movie-btn').disabled = false;
+      });
+    });
+  </script>
+`;
+Last edited 6 minutes ago
+
+

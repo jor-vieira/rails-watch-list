@@ -1,0 +1,18 @@
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.5/ext/stringio
+/root/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.5/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-3et8n3 sitelibdir\=./.gem.20250301-62146-3et8n3 clean
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.5/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-3et8n3 sitelibdir\=./.gem.20250301-62146-3et8n3
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.5/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-3et8n3 sitelibdir\=./.gem.20250301-62146-3et8n3 install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20250301-62146-3et8n3
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.5/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-3et8n3 sitelibdir\=./.gem.20250301-62146-3et8n3 clean

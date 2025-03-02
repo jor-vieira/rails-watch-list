@@ -1,0 +1,19 @@
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+/root/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-t7b6yc sitelibdir\=./.gem.20250301-62146-t7b6yc clean
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-t7b6yc sitelibdir\=./.gem.20250301-62146-t7b6yc
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-t7b6yc sitelibdir\=./.gem.20250301-62146-t7b6yc install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250301-62146-t7b6yc/debug
+
+current directory: /root/code/jor-vieira/rails-watch-list/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250301-62146-t7b6yc sitelibdir\=./.gem.20250301-62146-t7b6yc clean
