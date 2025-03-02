@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   root to: 'lists#index'
 
-get 'movies/search', to: 'movies#search', as: 'search_movies'
-
   resources :lists, except: [:edit, :update] do
     resources :bookmarks, only: [:new, :create]
   end

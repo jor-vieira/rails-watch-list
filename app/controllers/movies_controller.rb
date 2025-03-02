@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       format.json { render json: { movies: @movies } }
-      format.html # Caso queira renderizar uma view normal
+      format.html
     end
   end
 end

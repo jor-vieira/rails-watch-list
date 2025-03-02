@@ -1,21 +1,26 @@
-require 'json'
-require 'open-uri'
-
-puts "Limpando o banco de dados..."
+puts "Cleaning database..."
 Movie.destroy_all
 
-puts "Buscando filmes do TMDB..."
-url = "https://tmdb.lewagon.com/movie/top_rated"
-movies_serialized = URI.open(url).read
-movies = JSON.parse(movies_serialized)['results']
-
-movies.first(1000).each do |movie|
-  Movie.create!(
-    title: movie['title'],
-    overview: movie['overview'],
-    poster_url: "https://image.tmdb.org/t/p/w200#{movie['poster_path']}",
-    rating: movie['vote_average']
-  )
-end
-
-puts "Filmes reais adicionados!"
+puts "Creating movies..."
+Movie.create(title: "Anora", overview: "Directed by Sean Baker, the film tells the story of Ani, a stripper in Las Vegas who falls in love with the son of a Russian oligarch, believing that this relationship will transform her life.", poster_url: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/xmFdNzbUiT5XmH6rbIVGYDQHGeo.jpg", rating: 9.0)
+Movie.create(title: "The Brutalist", overview: "This historical epic by Brady Corbet follows Hungarian architect László Toth (Adrien Brody) and his wife, Erzsébet (Felicity Jones), who emigrate to the U.S. in 1947, seeking to rebuild their lives after the war.", poster_url: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/tsVRsCGJ4bZG1xWfQkUgt71ystL.jpg", rating: 9.0)
+Movie.create(title: "A Complete Unknown", overview: "Directed by James Mangold, this biographical film about Bob Dylan stars Timothée Chalamet and portrays the musician's rise and transformation in the 1960s music scene.", poster_url: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/tXNPJ3XvF4RaEV66Qm9QO3pu3w7.jpgg", rating: 6.5)
+Movie.create(title: "Conclave", overview: "Under the direction of Edward Berger, this Vatican thriller takes place behind the scenes of the papal election, where cardinals gather to choose a new Pope after the sudden death of the previous one.", poster_url: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/wWn78TMMw8yOdr5sG0Yl9v4saoA.jpg", rating: 8.0)
+Movie.create(title: "Dune: Part Two", overview: "The sci-fi saga directed by Denis Villeneuve continues the journey of Paul Atreides (Timothée Chalamet) as he fights for control over the desert planet of Arrakis.", poster_url: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/8LJJjLjAzAwXS40S5mx79PJ2jSs.jpgg", rating: 8.5)
+Movie.create(title: "Emilia Pérez", overview: "Directed by Jacques Audiard, this film tells the story of a drug cartel leader who, with the help of a lawyer, fulfills his dream of becoming the woman he always wanted to be.", poster_url: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/gJxh7y4U44aHTFHXlwIQehXJXT.jpg", rating: 8.5)
+Movie.create(title: "I'm Still Here", overview: "This Brazilian drama by Walter Salles is set during the military dictatorship and follows Eunice (Fernanda Torres) as she searches for the truth after her husband, Rubens (Selton Mello), disappears. .", poster_url: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/zNAw7jK8bwCK56rIW676pdgkwhd.jpg", rating: 9.5)
+Movie.create(title: "The Nickel Boys", overview: "Based on the novel by Colson Whitehead, this film directed by RaMell Ross explores the friendship between two Black teenagers in a juvenile reform school in 1960s Florida, exposing racial injustices of the era.", poster_url: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/hlTuZinZ2EvrkTKpW66z2RXySmE.jpg", rating: 7.0)
+Movie.create(title: "The Substance", overview: "Directed by Coralie Fargeat, this horror thriller stars Demi Moore as an aging actress who takes a mysterious drug capable of regenerating her cells and making her young again—only to face terrifying consequences.", poster_url: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/vWeOgzlhnP1sS23H3rzctGHB9Nb.jpg", rating: 9.0)
+Movie.create(title: "Central do Brasil (1998)", overview: "A deeply emotional journey of a former teacher and a young boy searching for his father across Brazil.", rating: 7.5)
+Movie.create(title: "Amarelo Manga (2002)", overview: "A raw and intense portrayal of love, desire, and despair in the streets of Recife.", rating: 7.5)
+Movie.create(title: "Cidade de Deus (2002", overview: "A gripping and visually stunning crime drama about the rise of gang violence in Rio de Janeiro’s favelas.", rating: 7.5)
+Movie.create(title: "Tropa de Elite (2007)", overview: "A brutal and realistic depiction of police corruption and drug wars in Rio de Janeiro.", rating: 7.5)
+Movie.create(title: "Bacurau (2019)", overview: "A bold and unique mix of genres that turns a forgotten Brazilian town into the center of a surreal resistance.", rating: 7.5)
+Movie.create(title: "Flores Raras (2013)", overview: "A beautiful and poignant love story between the poet Elizabeth Bishop and Brazilian architect Lota de Macedo Soares.", rating: 7.5)
+Movie.create(title: "Eu Não Quero Voltar Sozinho (2010)", overview: "A heartwarming short film about a blind teenager discovering love and independence.", rating: 7.5)
+Movie.create(title: "Madame Satã (2002)", overview: "A mesmerizing biopic about João Francisco dos Santos, an iconic and rebellious drag performer in 1930s Brazil.", rating: 7.5)
+Movie.create(title: "Praia do Futuro (2014)", overview: "A contemplative drama exploring identity, love, and exile through the journey of a Brazilian lifeguard.", rating: 7.5)
+Movie.create(title: "Dzi Croquetes (2009)", overview: "A vibrant documentary about the revolutionary and subversive Brazilian theater group that challenged dictatorship norms.", rating: 7.5)
+Movie.create(title: "Do Começo ao Fim (2009)", overview: "A controversial yet tender story of love and intimacy between two half-brothers.", rating: 7.5)
+Movie.create(title: "O Menino e o Vento (1967)", overview: "A poetic and mysterious drama about a young boy's connection with the wind and the clash between imagination and rigid societal norms.", rating: 7.5)
+puts "Created #{Movie.count} movies!"
