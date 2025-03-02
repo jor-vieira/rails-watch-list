@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+  require 'net/http'
+  
   def search
     require 'open-uri'
     require 'json'
@@ -29,4 +31,3 @@ class MoviesController < ApplicationController
     end
   end
 end
-

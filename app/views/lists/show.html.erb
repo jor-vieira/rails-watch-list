@@ -5,7 +5,7 @@
     <%= text_field_tag :query, nil, placeholder: "Search for a movie...", class: "form-control mb-2" %>
   <% end %>
 
-  <div id="movie-results"></div>
+  <div id="movie-results" class="d-flex flex-wrap"></div>
 
   <%= simple_form_for [@list, @bookmark], remote: true do |f| %>
     <%= f.input :movie_id, as: :hidden %>
@@ -15,4 +15,3 @@
 
   <%= link_to "Back to list", lists_path, class: "btn btn-secondary mt-3" %>
 </div>
-
