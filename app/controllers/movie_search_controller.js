@@ -1,5 +1,4 @@
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const searchForm = document.getElementById("movie-search-form");
     const resultsContainer = document.getElementById("movie-results");
     const addMovieBtn = document.getElementById("add-movie-btn");
@@ -36,4 +35,3 @@
         });
     });
   });
-</script>
