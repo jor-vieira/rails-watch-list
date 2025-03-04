@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:new, :create]
   end
 
-  resources :bookmarks, only: :destroy
+  resources :bookmarks, only: [:destroy] do
+    collection do
+      get ':id', to: 'bookmarks#handle_get_request'
+    end
+  end
   # Defines the root path route ("/")
   # root "posts#index"
 end
