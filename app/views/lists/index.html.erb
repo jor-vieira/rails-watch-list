@@ -16,7 +16,7 @@
           <%= link_to "View movies", list_path(list), class: "btn btn-primary new-list-btn" %>
 
 
-          <%= link_to "Delete List", list_path(list), data:  { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" }, class: "btn btn-danger ms-2"%>
+          <%= link_to "Delete List", list_path(list), method: :delete, data: { confirm: "Are you sure you want to delete this list?" }, class: "btn btn-danger ms-2" %>
 
         </div>
       </div>

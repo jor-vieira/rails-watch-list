@@ -23,6 +23,7 @@ class ListsController < ApplicationController
   end
 
   def destroy
+    @list = List.find(params[:id])
     @list.destroy
     redirect_to list_path(@list), notice: 'Bookmark was successfully destroyed.'
   end
