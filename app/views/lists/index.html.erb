@@ -8,20 +8,24 @@
 <div class="row g-4">
   <% @lists.each do |list| %>
     <div class="col-md-4">
-      <div class="card h-100 shadow-lg rounded-5 mx-3" style="border: 2px solid #bead9a; background-color: transparent;">
+      <div class="card h-100 shadow-lg rounded-5 mx-3"
+           style="border: 2px solid #bead9a; background-color: transparent;
+                  background-image: url(<%= asset_path('banner_small.png') %>);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;">
         <div class="card-body">
           <h5 class="card-title"><%= list.name %></h5>
           <p class="card-text"><%= pluralize(list.movies.count, 'movie') %></p>
 
-          <%= link_to "View movies", list_path(list), class: "btn btn-primary new-list-btn" %>
+          <%= link_to "View", list_path(list), class: "btn btn-primary view-list-btn" %>
 
 
-          <%= link_to "Delete List", list_path(list), method: :delete, data: { confirm: "Are you sure you want to delete this list?" }, class: "btn btn-danger ms-2" %>
+
+          <%= button_to 'X', list_path(list), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary new-list-btn" %>
 
         </div>
       </div>
     </div>
   <% end %>
 </div>
-
-<div id="search-results"></div>

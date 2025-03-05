@@ -27,9 +27,7 @@
             <p class="card-text"><small class="text-muted">⭐ <%= bookmark.movie.rating %></small></p>
             <p class="card-text"><%= bookmark.movie.overview %></p>
             <p class="card-text"><em>"<%= bookmark.comment %>"</em></p>
-            <%= link_to "Delete", bookmark_path(bookmark),
-                data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{bookmark.movie.title} from this list?" },
-                class: "btn btn-danger" %>
+            <%= button_to 'X', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{bookmark.movie.title} from this list?" }, class: "btn btn-primary new-list-btn" %>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show]
+  before_action :set_list, only: [:show, :destroy]
+
 
   def index
     @lists = List.all
@@ -25,8 +26,10 @@ class ListsController < ApplicationController
   def destroy
     @list = List.find(params[:id])
     @list.destroy
-    redirect_to list_path(@list), notice: 'Bookmark was successfully destroyed.'
+    redirect_to root_path, notice: "List deleted successfully"
   end
+
+
 
   private
 
@@ -38,11 +41,5 @@ class ListsController < ApplicationController
     params.require(:list).permit(:name)
   end
 
-  def search
-    @movies = TmdbService.search_movies(params[:query])
-    respond_to do |format|
-      format.json { render json: @movies }
-    end
-  end
 
 end

@@ -1,0 +1,10 @@
+.banner_small {
+  background-image: asset-url("banner_small.png");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
